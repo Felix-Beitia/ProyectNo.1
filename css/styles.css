@@ -1,0 +1,338 @@
+/*
+Universidad Tecnológica de Panamá
+Ingeniería Web
+Félix Beitia
+*/
+
+:root {
+    --primary-green: #22c55e;
+    --dark-green: #16a34a;
+    --navy-dark: #1e3a5f;
+    --navy-darker: #0f172a;
+    --light-green: #4ade80;
+    --bg-dark: #1e3a5f;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 70px;
+}
+
+/* Navigation */
+#mainNav {
+    background: linear-gradient(135deg, var(--navy-darker) 0%, var(--navy-dark) 100%);
+    transition: all 0.3s ease;
+}
+
+#mainNav .navbar-brand {
+    font-weight: bold;
+    color: white !important;
+}
+
+#mainNav .nav-link {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+#mainNav .nav-link:hover {
+    color: white !important;
+    transform: translateY(-2px);
+}
+
+/* Header/Masthead */
+.masthead {
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--light-green) 100%);
+    color: white;
+    padding: 150px 0 100px;
+    text-align: center;
+}
+
+.masthead-subheading {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+.masthead-heading {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+/* Sections */
+.page-section {
+    padding: 80px 0;
+}
+
+.section-heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.section-subheading {
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+}
+
+/* Services */
+.fa-stack {
+    transition: all 0.3s ease;
+}
+
+.fa-stack:hover {
+    transform: translateY(-10px);
+}
+
+.text-primary, .fa-circle.text-primary {
+    color: var(--primary-green) !important;
+}
+
+/* Portfolio */
+.portfolio-item {
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.portfolio-icon-box {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 60px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    border-radius: 10px;
+}
+
+.portfolio-hover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(16, 185, 129, 0.9);
+    opacity: 0;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.portfolio-item:hover .portfolio-hover {
+    opacity: 1;
+}
+
+.portfolio-hover-content {
+    color: white;
+}
+
+.portfolio-caption {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.portfolio-caption-heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    padding: 0;
+    list-style: none;
+}
+
+.timeline:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 40px;
+    width: 2px;
+    margin-left: -1.5px;
+    content: "";
+    background-color: #e9ecef;
+}
+
+.timeline > li {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 50px;
+}
+
+.timeline > li:after,
+.timeline > li:before {
+    display: table;
+    content: " ";
+}
+
+.timeline > li:after {
+    clear: both;
+}
+
+.timeline > li .timeline-panel {
+    position: relative;
+    float: right;
+    width: 100%;
+    padding: 0 20px 0 100px;
+    text-align: left;
+}
+
+.timeline > li .timeline-image {
+    position: absolute;
+    z-index: 100;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    margin-left: 0;
+    text-align: center;
+    color: white;
+    border: 7px solid #e9ecef;
+    border-radius: 100%;
+    background-color: var(--primary-green);
+}
+
+.timeline > li .timeline-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+
+.timeline > li.timeline-inverted > .timeline-panel {
+    float: right;
+    padding: 0 20px 0 100px;
+    text-align: left;
+}
+
+/* Team */
+.team-member {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.team-member img {
+    width: 200px;
+    height: 200px;
+    border: 7px solid var(--primary-green);
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.team-member h4 {
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.team-description {
+    margin: 1.5rem 0;
+    text-align: justify;
+    line-height: 1.8;
+}
+
+.btn-social {
+    height: 2.5rem;
+    width: 2.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border-radius: 100%;
+}
+
+.btn-dark {
+    background-color: var(--bg-dark);
+    border-color: var(--bg-dark);
+}
+
+.btn-dark:hover {
+    background-color: var(--primary-green);
+    border-color: var(--primary-green);
+}
+
+/* Contact */
+#contact {
+    background: linear-gradient(135deg, var(--navy-darker) 0%, var(--navy-dark) 100%);
+    color: white;
+}
+
+#contact .section-heading {
+    color: white;
+}
+
+#contact .section-subheading {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-control {
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+}
+
+.form-control:focus {
+    border-color: var(--primary-green);
+    box-shadow: 0 0 0 0.2rem rgba(16, 185, 129, 0.25);
+}
+
+.form-group-textarea textarea {
+    height: 100%;
+    min-height: 200px;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--primary-green);
+    border-color: var(--primary-green);
+}
+
+.btn-primary:hover {
+    background-color: var(--dark-green);
+    border-color: var(--dark-green);
+}
+
+.btn-xl {
+    padding: 1.25rem 2.5rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--navy-darker);
+    color: white;
+}
+
+.footer a {
+    color: white;
+}
+
+.footer a:hover {
+    color: var(--primary-green);
+}
+
+/* Modal */
+.portfolio-modal .modal-dialog {
+    max-width: 800px;
+}
+
+.portfolio-modal .modal-content {
+    border-radius: 15px;
+    padding: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .masthead-heading {
+        font-size: 2.5rem;
+    }
+
+    .section-heading {
+        font-size: 2rem;
+    }
+}
